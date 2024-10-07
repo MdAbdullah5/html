@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Event - Payment Options</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-family: 'Brush Script MT', cursive;
+            font-weight: bold;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        header nav a.login {
+            background-color: #3DC7B6;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-align: center;
+            background-color: #ddd;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .sidebar a:hover {
+            background-color: #bbb;
+        }
+
+        .content {
+            width: calc(100% - 240px); /* Adjust based on sidebar width */
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        .payment-options {
+            padding: 20px;
+            background-color: #efefef;
+            border-radius: 10px;
+        }
+
+        .payment-options h2 {
+            margin-bottom: 20px;
+        }
+
+        .payment-options .methods {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .methods button {
+            background-color: white;
+            border: none;
+            padding: 15px 20px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .methods button:hover {
+            background-color: #ddd;
+        }
+
+        .upi-options {
+            margin-top: 20px;
+        }
+
+        .upi-options h3 {
+            margin-bottom: 15px;
+        }
+
+        .upi-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .upi-icons img {
+            width: 80px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <img class="img_logo" src="https://drive.google.com/file/d/1xozTftQuCjZos9PHExLSajaSGUMcmWg9/view?usp=sharing" alt="logo">
+            <nav>
+                <a href="#">Locations</a>
+                <a href="#" class="login">Login/Sign-up</a>
+            </nav>
+        </header>
+
+        <div class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <a href="#">Event</a>
+                <a href="#">Movie</a>
+                <a href="#">Streams</a>
+                <a href="#">Sports</a>
+                <a href="#">Plays</a>
+            </aside>
+
+            <!-- Payment Options Section -->
+            <section class="content">
+                <h2>Payment Options</h2>
+                <div class="payment-options" style="width:800px; display:inline-flex;">
+                    
+                    <div class="methods">
+                        <button >QuickPay</button>
+                        <button>Pay by any UPI App</button>
+                        <button>Debit/Credit Card</button>
+                        <button>Net Banking</button>
+                        <button>Mobile Wallets</button>
+                    </div>
+                    
+                    <div class="upi-options" style="display: inline-flex; margin-left: 150px;">
+                        <h4>UPI Options</h4>
+                        <div class="upi-icons">
+                            
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Paytm_logo.png/320px-Paytm_logo.png" alt="Paytm">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/8/88/PhonePe_Logo.png" alt="PhonePe">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Google_Pay_logo.svg/512px-Google_Pay_logo.svg.png" alt="Google Pay">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Amazon_Pay_Logo.svg/512px-Amazon_Pay_Logo.svg.png" alt="Amazon Pay">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/BHIM_logo.svg/512px-BHIM_logo.svg.png" alt="BHIM">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/UPI_Logo.svg/512px-UPI_Logo.svg.png" alt="Other UPI">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/QR_code_example.svg/512px-QR_code_example.svg.png" alt="Scan any QR">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>

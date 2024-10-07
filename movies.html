@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-family: 'Brush Script MT', cursive;
+            font-weight: bold;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        header nav a.login {
+            background-color: #3DC7B6;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
+
+        header .search-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        header .search-bar input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 5px;
+            border-radius: 25px;
+            font-size: 14px;
+        }
+
+        header .search-bar input::placeholder {
+            color: #999;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-align: center;
+            background-color: #ddd;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .sidebar a:hover, .sidebar a.active {
+            background-color: #3DC7B6;
+            color: white;
+        }
+
+        .content {
+            width: calc(100% - 240px); /* Adjust based on sidebar width */
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .filter-bar button {
+            background-color: #ddd;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .filter-bar button:hover {
+            background-color: #3DC7B6;
+            color: white;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .grid-item {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            height: 200px;
+            width: 150px;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .grid-item p {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">Ticket Event</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for Movies, Sports, Streams, Plays...">
+            </div>
+            <nav>
+                <a href="#">Locations</a>
+                <a href="#" class="login">Login/Sign-up</a>
+            </nav>
+        </header>
+
+        <div class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <a href="/main.html">Home</a>
+                <a href="/events.html">Event</a>
+                <a href="/movies.html" class="active">Movie</a>
+                <a href="/streams.html">Streams</a>
+                <a href="/sports.html">Sports</a>
+                <a href="/plays.html">Plays</a>
+
+            </aside>
+
+            <!-- Content -->
+            <section class="content">
+                <!-- Filter Bar -->
+                <div class="filter-bar">
+                    <button>Language</button>
+                    <button>Genres</button>
+                    <button>Format</button>
+                    <button>Clear</button>
+                </div>
+
+                <!-- Grid of Movies -->
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="devara-part-1.jpg" alt="Devara Part 1">
+                        <p>Devara Part-1</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="sathyam-sundaram.jpg" alt="Sathyam Sundaram">
+                        <p>Sathyam Sundaram</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="mathu-vadala.jpg" alt="Mathu Vadala 2">
+                        <p>Mathu Vadala 2</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="kalinga.jpg" alt="Kalinga">
+                        <p>Kalinga</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="saripodhaa-sanivaaram.jpg" alt="Saripodhaa Sanivaaram">
+                        <p>Saripodhaa Sanivaaram</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="deadpool-wolverine.jpg" alt="Deadpool and Wolverine">
+                        <p>Deadpool and Wolverine</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="swag.jpg" alt="Swag">
+                        <p>SWAG</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="joker-folie-a-deux.jpg" alt="Joker: Folie A Deux">
+                        <p>Joker: Folie A Deux</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>
